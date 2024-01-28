@@ -1,13 +1,88 @@
+"use client";
 import Heading from "@/components/Heading";
+import Image from "next/image";
 
 const About = () => {
+  const skills = [
+    {
+      name: "NodeJS",
+      url: "/skills/node.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "CSS",
+      url: "/skills/css.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Figma",
+      url: "/skills/figma.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Flutter",
+      url: "/skills/flutter.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Git",
+      url: "/skills/git.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "GraphQL",
+      url: "/skills/graphql.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "HTML",
+      url: "/skills/html.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "JavaScript",
+      url: "/skills/javascript.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Material UI",
+      url: "/skills/mu5.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Python",
+      url: "/skills/python.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "React",
+      url: "/skills/react.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Redux",
+      url: "/skills/redux.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "Typescript",
+      url: "/skills/typescript.png",
+      bgColor: "bg-purple-200",
+    },
+    {
+      name: "NodeJS",
+      url: "/skills/node.png",
+      bgColor: "bg-purple-200",
+    },
+  ];
+
   return (
     <div className="max-w-7xl ">
       <div className="flex items-center justify-center flex-col gap-4 mt-8">
         <Heading>About me</Heading>
-        <div className="self-start text-white font-montA sm:text-2xl text-xl font-bold">
+        <p className="self-start text-white font-montA sm:text-2xl text-xl font-bold">
           Get to know me!
-        </div>
+        </p>
         <div className="text-white-800 font-montA sm:text-xl text-lg">
           I'm a{" "}
           <span className="text-white font-bold">Full Stack Developer</span>{" "}
@@ -33,8 +108,23 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-7 text-white font-montA sm:text-2xl text-xl font-bold">
-        My Skills
+      <div>
+        <p className="mt-7 text-white font-montA sm:text-2xl text-xl font-bold">
+          My Skills
+        </p>
+        <div className="mt-3 flex flex-wrap justify-center items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-8 ">
+            {skills.map((item) => (
+              <div className="flex items-center justify-center flex-col">
+                <div className={`${item.bgColor} rounded-full p-3 `}>
+                  <Image src={item.url} width={50} height={50} />
+                </div>
+                <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
+          <div className="h-60  bg-blue-900">2</div>
+        </div>
       </div>
     </div>
   );
