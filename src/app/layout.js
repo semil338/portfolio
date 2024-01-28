@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -13,8 +13,9 @@ export default function RootLayout({ children }) {
         <div className="main">
           <div className="gradient" />
         </div>
-        <main className="app">
-          {/* <Navbar /> */}
+
+        <main className="relative z-10 flex justify-center items-center flex-col md:px-16 px-6 ">
+          <Navbar />
           {children}
         </main>
       </body>

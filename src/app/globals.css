@@ -8,12 +8,12 @@ body {
   /* background: linear-gradient(to right, #734b6d, #42275a); */
 }
 
-main {
+/* main {
   font-family: "Cinzel Decorative", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
-}
+} */
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -80,6 +80,6 @@ main {
 
 /* Tailwind Styles */
 
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
-}
+/* .app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto md:px-16 px-6;
+} */
